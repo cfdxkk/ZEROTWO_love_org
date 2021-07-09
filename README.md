@@ -1,5 +1,9 @@
 # zero_two
 
+## now this project is running at vercel in this address:
+
+https://zerotwo-love-proj-v01.vercel.app/
+
 ## Project setup
 ```
 npm install
