@@ -72,10 +72,10 @@ export default {
       document.getElementById("redblock").animate(
           [
             {
-              right: "-20px"
+              width: "0px"
             },
             {
-              right: "0px"
+              width: "20px"
             }
           ],
           {
@@ -90,11 +90,11 @@ export default {
       document.getElementById("blueblock").animate(
           [
             {
-              right: "-70px",
+              width: "0px",
               bottom: "0"
             },
             {
-              right: "0px",
+              width: "70px",
               bottom: "0"
             }
           ],
@@ -618,12 +618,12 @@ export default {
 
 #redblock{
 
-  width: 20px;
+  width: 0px;
   height: 13px;
 
   position: absolute;
 
-  right: -20px;
+  right: 0px;
 
   background-color: #ff3f1a;
   clip-path: polygon(5px 0, 100% 0%, 100% 100%, 0 100%);
@@ -632,12 +632,12 @@ export default {
 
 #blueblock{
 
-  width: 70px;
+  width: 0px;
   height: 5px;
 
   position: absolute;
 
-  right: -70px;
+  right: 0px;
   bottom: 0px;
 
   background-color: #00a7e0;
