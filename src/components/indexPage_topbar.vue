@@ -300,6 +300,7 @@ export default {
 
           document.getElementById("whiteline2").style.opacity = "0"
 
+          document.getElementById("topbarleftbox").style.width = "200px"
 
           isGone = true
         }
@@ -393,6 +394,24 @@ export default {
                 ],
                 {
                   duration: 200,
+                  fill: "both",
+                  easing: "ease-in-out"
+                }
+            )
+
+            document.getElementById("topbarleftbox").animate(
+                [
+                  {
+                    width: "420px"
+
+                  },
+                  {
+                    width: "200px"
+
+                  }
+                ],
+                {
+                  duration: 0,
                   fill: "both",
                   easing: "ease-in-out"
                 }
