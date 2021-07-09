@@ -1,12 +1,12 @@
 <template>
-  <div id="audios">
+  <div id="sounds">
     <audio id="clickaudio">
-      <source src="../assets/audio/hit_audio.mp3" type="audio/mpeg">
+      <source src="../staticFile/audio/hit_audio.mp3" type="audio/mpeg">
       <!--    Your browser does not support the audio tag.-->
     </audio>
 
     <audio id="bgaudio">
-      <source src="../assets/audio/CODE_002.mp3" type="audio/mpeg">
+      <source src="../staticFile/audio/CODE_002.mp3" type="audio/mpeg">
       <!--    Your browser does not support the audio tag.-->
     </audio>
   </div>
@@ -15,7 +15,22 @@
 
 <script>
 export default {
-  name: "audio"
+  name: "sound",
+  methods: {
+    clickandplay: () => {
+
+      const clickaudio = document.getElementById("clickaudio")
+      clickaudio.volume = 0.05
+      clickaudio.play()
+
+      setTimeout(() => {
+        const bgaudio = document.getElementById("bgaudio")
+        bgaudio.volume = 0.1
+        bgaudio.play()
+      },500)
+
+    }
+  }
 }
 </script>
 

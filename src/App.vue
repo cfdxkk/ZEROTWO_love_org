@@ -1,30 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+<!--  <h2>hello world</h2>-->
+  <index></index>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
+// import StartAnimation from "@/components/StartAnimation";
+// import * as spritejs from 'spritejs';
+import indexPage from "@/views/main/indexPage";
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: "App",
+  components: {
+    index: indexPage
   }
 }
+
+</script>
+
+<style lang="scss">
+  body{
+    padding: 0;
+    margin: 0;
+  }
 </style>
