@@ -1,6 +1,6 @@
 # zero_two
 
-## now this project is running at vercel in this address:
+## now this project is running in vercel at this address:
 
 https://zerotwo-love-proj-v01.vercel.app/
 
