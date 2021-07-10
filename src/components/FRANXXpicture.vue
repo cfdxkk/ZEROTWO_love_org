@@ -1,0 +1,22 @@
+<template>
+  <div id="FRANXXpicture">
+    <h2>this is picture page</h2>
+    <p>we will show anime pictures here</p>
+  </div>
+
+
+</template>
+
+<script>
+export default {
+  name: "FRANXXpicture"
+}
+</script>
+
+<style scoped>
+
+#FRANXXpicture{
+  border: 1px solid purple;
+}
+
+</style>

@@ -67,10 +67,10 @@ export default {
       console.log("(XX)italyLine_LeftBottomX:" + italyLine_LeftBottomX);
 
 
-      if( (this.winWidth/this.winHeight) > 3 ){
+      if( (this.winWidth/this.winHeight) > 2.5 ){
         // console.log(this.winwidth);
 
-        console.log("我的屏幕实在是太tm宽了大于2啦");
+        console.log("我的屏幕实在是太tm宽了，比例大于2.5啦");
         let logoLeft = ""
         logoLeft =      ((italyLine_LeftTopX + italyLine_LeftBottomX)/2) - (this.winWidth * 0.02)      +      "px"
 
@@ -80,14 +80,14 @@ export default {
         // console.log("(XX)logoLeft:"+logoLeft);
         document.getElementById("xxlogo").style.left = logoLeft
 
-      } else if( 3 >= (this.winWidth/this.winHeight) && ((this.winWidth/this.winHeight) >= 0.8701298 && italyLine_LeftBottomX > 0 )){
+      } else if( 2.5 >= (this.winWidth/this.winHeight) && ((this.winWidth/this.winHeight) >= 0.8701298 && italyLine_LeftBottomX > 0 )){
 
         // console.log(this.winwidth);
 
         console.log("我的屏幕刚刚好");
         let logoLeft = ""
         console.log("(XX)winWidht" + this.winWidth);
-        logoLeft =      ((italyLine_LeftTopX + italyLine_LeftBottomX)/2) - 90     +      "px"
+        logoLeft =      ((italyLine_LeftTopX + italyLine_LeftBottomX)/2) - 80     +      "px"
 
         // console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         // console.log("(XX)topPoint:" + italyLine_LeftTopX);
@@ -141,10 +141,10 @@ export default {
         console.log("(XX)italyLine_LeftBottomX:" + italyLine_LeftBottomX);
 
 
-        if( (this.winWidth/this.winHeight) > 3 ){
+        if( (this.winWidth/this.winHeight) > 2.5 ){
           // console.log(this.winwidth);
 
-          console.log("我的屏幕实在是太tm宽了大于2啦");
+          console.log("我的屏幕实在是太tm宽了，比例大于2.5啦");
           let logoLeft = ""
           logoLeft =      ((italyLine_LeftTopX + italyLine_LeftBottomX)/2) - (this.winWidth * 0.02)      +      "px"
 
@@ -154,14 +154,14 @@ export default {
           // console.log("(XX)logoLeft:"+logoLeft);
           document.getElementById("xxlogo").style.left = logoLeft
 
-        } else if( 3 >= (this.winWidth/this.winHeight) && ((this.winWidth/this.winHeight) >= 0.8701298 && italyLine_LeftBottomX > 0 )){
+        } else if( 2.5 >= (this.winWidth/this.winHeight) && ((this.winWidth/this.winHeight) >= 0.8701298 && italyLine_LeftBottomX > 0 )){
 
           // console.log(this.winwidth);
 
           console.log("我的屏幕刚刚好");
           let logoLeft = ""
           console.log("(XX)winWidht" + this.winWidth);
-          logoLeft =      ((italyLine_LeftTopX + italyLine_LeftBottomX)/2) - 90     +      "px"
+          logoLeft =      ((italyLine_LeftTopX + italyLine_LeftBottomX)/2) - 80     +      "px"
 
           // console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
           // console.log("(XX)topPoint:" + italyLine_LeftTopX);

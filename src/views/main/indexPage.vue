@@ -4,13 +4,15 @@
   <xx ref="xx"></xx>  <!-- XXXXXXXXXXXXXXXXXXXXX  -->
 
   <startanime @click="openTheDoor(1)" ref="startanime"></startanime>  <!-- 开屏动画 -->
-  <indextopbar ref="indextopbar"></indextopbar>
+  <indextopbar ref="indextopbar"></indextopbar>  <!-- 顶部栏 -->
 
-  <!-- 用于存放主页背景图 -->
+  <!-- 主页背景图 -->
   <background ref="background"></background>
 
   <!-- 用于存放主页所有用到的音频与音频操作相关脚本 -->
   <sound ref="sound"></sound>
+
+
 
 
 </template>

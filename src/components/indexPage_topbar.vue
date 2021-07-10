@@ -12,13 +12,20 @@
           <div id="userbox">username</div>
         </div>
         <div id="whiteline1"></div>
-        <div id="enterfranxx">
-          <div class="textbox1">进入论坛</div>
-        </div>
-        <div id="whiteline2"></div>
-        <div id="about">
-          <div class="textbox2">关于</div>
-        </div>
+
+        <router-link to="/FRANXX/picture">
+          <div id="enterfranxx">
+            <div class="textbox1">进入论坛</div>
+          </div>
+        </router-link>
+
+        <router-link to="/about">
+          <div id="whiteline2"></div>
+          <div id="about">
+            <div class="textbox2">关于</div>
+          </div>
+        </router-link>
+
 
       </div>
     </div>
@@ -122,7 +129,7 @@ export default {
               }
             ],
             {
-              duration: 300,
+              duration: 200,
               fill: "both",
               easing: "ease-in-out"
             }
@@ -146,7 +153,7 @@ export default {
               }
             ],
             {
-              duration: 200,
+              duration: 300,
               fill: "both",
               easing: "ease-in-out"
             }
@@ -182,7 +189,7 @@ export default {
               }
             ],
             {
-              duration: 300,
+              duration: 200,
               fill: "both",
               easing: "ease-in-out"
             }
@@ -206,7 +213,7 @@ export default {
               }
             ],
             {
-              duration: 200,
+              duration: 300,
               fill: "both",
               easing: "ease-in-out"
             }
@@ -239,7 +246,7 @@ export default {
               }
             ],
             {
-              duration: 300,
+              duration: 200,
               fill: "both",
               easing: "ease-in-out"
             }
@@ -263,7 +270,7 @@ export default {
               }
             ],
             {
-              duration: 200,
+              duration: 300,
               fill: "both",
               easing: "ease-in-out"
             }

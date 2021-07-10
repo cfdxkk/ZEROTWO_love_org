@@ -1,20 +1,51 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+
+// 不使用路由懒加载
+import indexPage from '../views/main/indexPage'
+// import FRANXXindex from "@/views/FRANXX/FRANXXindex";
+// import FRANXXpicture from "@/components/FRANXXpicture";
+// import FRANXXhole from "@/components/FRANXXhole";
+// import About from "@/views/about/About";
+
+// 使用路由懒加载
+// const indexPage = () => import('../views/main/indexPage')
+const FRANXXindex = () => import('@/views/FRANXX/FRANXXindex')
+const FRANXXpicture = () => import('@/components/FRANXXpicture')
+const FRANXXhole = () => import('@/components/FRANXXhole')
+const About = () => import('@/views/about/About')
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'indexpage',
+    component: indexPage
+  },
+  {
+    path: '/FRANXX',
+    name: 'FRANXXbbs',
+    component: FRANXXindex,
+    children: [
+      {
+        path: 'picture',
+        components: {
+          FRANXXpicture: FRANXXpicture
+        }
+      },
+      {
+        path: 'hole',
+        components: {
+          FRANXXhole,
+        }
+      }
+    ]
   },
   {
     path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    name: 'about',
+    component: About
   }
+
+
 ]
 
 const router = createRouter({

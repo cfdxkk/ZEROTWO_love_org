@@ -1,5 +1,12 @@
 <template>
-  <h2>this is about page</h2>
+
+  <div id="about">
+    <h2>this is about page</h2>
+    <p>why? what? who? where? when? and How?</p>
+    <p>This page will till you Everything about my website, but not now~</p>
+    <router-link to="/">返回首页 </router-link>
+  </div>
+
 </template>
 
 <script>
@@ -9,5 +16,19 @@ export default {
 </script>
 
 <style scoped>
+
+#about{
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0;
+  margin: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: aqua;
+}
 
 </style>
