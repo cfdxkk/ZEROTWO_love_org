@@ -502,7 +502,7 @@ export default {
   },
   mounted() {
 
-    this.drowLogo(1)
+    this.drowLogo(0)
 
   }
 }
