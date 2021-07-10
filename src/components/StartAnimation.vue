@@ -450,7 +450,6 @@ export default {
         }
 
       }
-      flag = 0
 
 
 
@@ -503,7 +502,7 @@ export default {
   },
   mounted() {
 
-    this.drowLogo(0)
+    this.drowLogo(1)
 
   }
 }
