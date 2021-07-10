@@ -55,6 +55,10 @@ export default {
     indextopbarAttend() {
       this.$refs.indextopbar.topbarenter()
     }
+  },
+  beforeRouteUpdate(to,from,next){
+    this.$refs.startanime.openTheDoor(0)
+    next()
   }
 }
 </script>
