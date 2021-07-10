@@ -1,11 +1,15 @@
 <template>
-  <div id="incloud">
-    <div id="canvas01">
+
+
+    <div id="incloud">
+      <div id="canvas01">
+      </div>
+      <div id="tiptext">
+        <img @mouseenter="pikapika" @mouseleave="stilllight" id="clicktocontinue" src="../staticFile/imgs/clicktocontinue.png" alt="点击以继续">
+      </div>
     </div>
-    <div id="tiptext">
-      <img @mouseenter="pikapika" @mouseleave="stilllight" id="clicktocontinue" src="../staticFile/imgs/clicktocontinue.png" alt="点击以继续">
-    </div>
-  </div>
+
+
 </template>
 
 
@@ -44,7 +48,7 @@ export default {
       rightDoor: null,
       leftdoor: null,
       rightdoor: null,
-      ani01Fin: false
+      ani01Fin: false,
     }
   },
   computed: {
@@ -78,15 +82,6 @@ export default {
       console.log("窗口高度：" + this.winHeight);
       console.log("flag is：" + flag);
 
-      //绘制OP动画的斜线和大门
-      const {Scene, Polyline} = spritejs
-      const canvas01 = document.getElementById('canvas01')
-      const scene = new Scene({
-        container: canvas01,
-        width: this.winWidth,
-        height: this.winHeight,
-      })
-      const layer = scene.layer()
 
 
 
@@ -98,7 +93,7 @@ export default {
           // 中间的白色斜线 -左上
           italyLine_LeftTopX = this.winWidth * 0.368489,
           italyLine_LeftTopY = zero,
-                                                       // 已知 斜线角度 与 浏览器页面高度，做垂直于浏览器上边且过斜线下端点的辅助线，
+          // 已知 斜线角度 与 浏览器页面高度，做垂直于浏览器上边且过斜线下端点的辅助线，
           // 中间的白色斜线 -左下                             辅助线长度等于浏览器页面高度，可得减可得斜线下端点X值与上端点X值之差
           italyLine_LeftBottomX = italyLine_LeftTopX - (1/(Math.tan((65*(Math.PI/180))))) * this.winHeight,
           italyLine_LeftBottomY = this.winHeight,
@@ -167,9 +162,22 @@ export default {
 
 
 
+      //绘制OP动画的斜线和大门
+      const {Scene, Polyline} = spritejs
+      const canvas01 = document.getElementById('canvas01')
+      const scene = new Scene({
+        container: canvas01,
+        width: this.winWidth,
+        height: this.winHeight,
+      })
+      const layer = scene.layer()
+
+
+
       if (flag == 0){
 
 
+        document.getElementById('incloud').style.height = 100 + "vh"   //展开画布
 
         //绘制左边小门, 底层图层的代码在上
         this.leftdoor = new Polyline({
@@ -271,7 +279,7 @@ export default {
         layer.append(this.rightDoor)
 
       }
-
+      console.log("绘制完毕");
 
 
 //————————————————————————————————careful gook luck————————————————————————————————————————
@@ -456,9 +464,9 @@ export default {
 
     },
 
-    openTheDoor: function () {
-      console.log("test openDoor");
-      this.drowLogo(1)
+    openTheDoor: function (flag) {
+      // console.log("test openDoor");
+      this.drowLogo(flag)
     },
     pikapika: () => {
       const tipTextimg = document.getElementById("clicktocontinue")
@@ -501,9 +509,7 @@ export default {
 
   },
   mounted() {
-
     this.drowLogo(0)
-
   }
 }
 </script>
