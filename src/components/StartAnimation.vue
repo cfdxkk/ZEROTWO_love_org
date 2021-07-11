@@ -93,7 +93,7 @@ export default {
           // 中间的白色斜线 -左上
           italyLine_LeftTopX = this.winWidth * 0.368489,
           italyLine_LeftTopY = zero,
-          // 已知 斜线角度 与 浏览器页面高度，做垂直于浏览器上边且过斜线下端点的辅助线，
+                                                         // 已知 斜线角度 与 浏览器页面高度，做垂直于浏览器上边且过斜线下端点的辅助线，
           // 中间的白色斜线 -左下                             辅助线长度等于浏览器页面高度，可得减可得斜线下端点X值与上端点X值之差
           italyLine_LeftBottomX = italyLine_LeftTopX - (1/(Math.tan((65*(Math.PI/180))))) * this.winHeight,
           italyLine_LeftBottomY = this.winHeight,
@@ -163,21 +163,21 @@ export default {
 
 
       //绘制OP动画的斜线和大门
-      const {Scene, Polyline} = spritejs
-      const canvas01 = document.getElementById('canvas01')
-      const scene = new Scene({
+      let {Scene, Polyline} = spritejs
+      let canvas01 = document.getElementById('canvas01')
+      let scene = new Scene({
         container: canvas01,
         width: this.winWidth,
         height: this.winHeight,
       })
-      const layer = scene.layer()
+      let layer = scene.layer()
 
 
 
       if (flag == 0){
 
 
-        document.getElementById('incloud').style.height = 100 + "vh"   //展开画布
+        document.getElementById('incloud').style.display = 'inline' //展开画布
 
         //绘制左边小门, 底层图层的代码在上
         this.leftdoor = new Polyline({
@@ -277,9 +277,9 @@ export default {
         })
 
         layer.append(this.rightDoor)
-
+        console.log("绘制完毕");
       }
-      console.log("绘制完毕");
+
 
 
 //————————————————————————————————careful gook luck————————————————————————————————————————
@@ -291,10 +291,15 @@ export default {
         let animeTime = 900  //动画总时长，单位：毫秒
 
         setTimeout(() => {
-          document.getElementById('canvas01').style.display = "none"     //隐藏画板，用于退出鼠标样式以及异常情况的跳出
-          document.getElementById('tiptext').style.display = "none"      //隐藏提示文字，用于退出鼠标样式以及异常情况的跳出
-
+          // document.getElementById('canvas01').style.display = "none"     //隐藏画板，用于退出鼠标样式以及异常情况的跳出
+          // document.getElementById('tiptext').style.display = "none"      //隐藏提示文字，用于退出鼠标样式以及异常情况的跳出
+          document.getElementById('incloud').style.display = 'none'     //动画完成后收起画板
         },animeTime)
+
+        // setTimeout(() => {
+          // document.getElementById('incloud').style.height = 0 + "px"   //动画完成后收起画板
+
+        // },animeTime)
 
 
 
@@ -448,9 +453,7 @@ export default {
 
           this.ani01Fin = true  //将动画播放完成标识设为true
 
-          setTimeout(() => {
-            document.getElementById('incloud').style.height = 0 + "px"   //动画完成后收起画板
-          },animeTime)
+
 
 
 
@@ -508,8 +511,17 @@ export default {
     }
 
   },
+  // activated() {
+  //   this.drowLogo(0)
+  //   console.log("(SA)activated");
+  // }
   mounted() {
     this.drowLogo(0)
+    console.log("mounted被调用");
+  },
+  unmounted() {
+    console.log("unmounted被调用");
+    // this.drowLogo(0)
   }
 }
 </script>

@@ -1,11 +1,15 @@
 <template>
 <!--  <h2>hello world</h2>-->
 <!--  <index></index>-->
-  <router-view v-slot="{ Component }" name="indexPage">
-    <keep-alive>
-      <component :is="Component" />
-    </keep-alive>
-  </router-view>
+
+  <router-view name="indexPage"></router-view>
+
+<!--  <router-view v-slot="{ Component }" name="indexPage">-->
+<!--    <keep-alive>-->
+<!--      <component :is="Component" />-->
+<!--    </keep-alive>-->
+<!--  </router-view>-->
+
   <router-view></router-view>
 
 
