@@ -2,7 +2,8 @@
 ## NSFW
 
 ## More info see 👇
-http://zerotwo.love
+[zerotwo.love](http://www.zerotwo.love "请右键在新窗口打开")
+
 
 ## now this project is running in vercel at this address:
 https://zerotwo-love-proj-v01.vercel.app/
