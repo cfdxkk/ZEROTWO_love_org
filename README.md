@@ -1,8 +1,10 @@
-# zero_two
+# ZERO_TWO_love
 ## NSFW
 
-## now this project is running in vercel at this address:
+## More info see 👇
+http://zerotwo.love
 
+## now this project is running in vercel at this address:
 https://zerotwo-love-proj-v01.vercel.app/
 
 ## Project setup
