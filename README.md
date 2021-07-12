@@ -1,10 +1,8 @@
 # ZERO_TWO_love
 ## #NSFW
 
-## More info see 👇
-[zerotwo.love](http://www.zerotwo.love "请右键在新窗口打开")
-
-[darlinginthefranxx.fans](http://www.darlinginthefranxx.fans "请右键在新窗口打开")
+## More infos see 👇
+[zerotwo.love](http://www.zerotwo.love "请右键在新窗口打开") || [darlinginthefranxx.fans](http://www.darlinginthefranxx.fans "请右键在新窗口打开")
 
 
 ## now this project's demo is running in vercel at:
