@@ -5,7 +5,7 @@
 [zerotwo.love](http://www.zerotwo.love "请右键在新窗口打开") || [darlinginthefranxx.fans](http://www.darlinginthefranxx.fans "请右键在新窗口打开")
 
 
-## now this project's demo is running in vercel at:
+## now this project's demo page is running in vercel at:
 https://zerotwo-love-proj-v01.vercel.app/
 
 ## Project setup
